@@ -1,0 +1,85 @@
+<mat-card style="display: flex; align-items: center">
+  <mat-card-header>
+    <mat-card-title>Documento Fiscal</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form [formGroup]="form">
+      <div>
+        <mat-form-field class="example-width" appearance="outline">
+          <mat-label>Data de Emissão</mat-label>
+          <input matInput #input formControlName="dtEmissao" />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Nº da Nota</mat-label>
+          <input matInput #input formControlName="numeroNota" />
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Cliente</mat-label>
+          <input matInput #input formControlName="nmCliente" />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>CNPJ Cliente</mat-label>
+          <input matInput #input formControlName="cnpjCliente" />
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Endereço Cliente</mat-label>
+          <input matInput #input formControlName="endCliente" />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Município UF Cliente</mat-label>
+          <input matInput #input formControlName="muniUfCliente" />
+        </mat-form-field>
+      </div>
+
+      <div style="width: 100%;">
+        <mat-form-field style="width: 100%;" class="example-full-width" appearance="outline">
+          <mat-label style="width: 100%;">Descrição de Serviços</mat-label>
+          <input style="width: 100%;" matInput #input formControlName="descServicos" />
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Valor</mat-label>
+          <input matInput #input formControlName="valor" />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Valor por Extenso</mat-label>
+          <input matInput #input formControlName="valorEx" />
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Banco</mat-label>
+          <input matInput #input formControlName="banco" />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Pix</mat-label>
+          <input matInput #input formControlName="pix" />
+        </mat-form-field>
+      </div>
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <div style="display: flex; flex-direction: column">
+      <button mat-raised-button color="primary" (click)="imprimir()">
+        Imprimir
+      </button>
+      <button mat-button (click)="limpar()">Limpar</button>
+    </div>
+  </mat-card-actions>
+</mat-card>
