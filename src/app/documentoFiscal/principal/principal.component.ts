@@ -35,7 +35,7 @@ export class PrincipalComponent {
   imprimir() {
     this.documentoFiscal = this.form.value;
     window.open(
-      `http://localhost:8080/documento-fiscal/pdf?dtEmissao=${this.documentoFiscal.dtEmissao}&numeroNota=${this.documentoFiscal.numeroNota}&nmCliente=${this.documentoFiscal.nmCliente}&endCliente=${this.documentoFiscal.endCliente}&muniUfCliente=${this.documentoFiscal.muniUfCliente}&cnpjCliente=${this.documentoFiscal.cnpjCliente}&descServicos=${this.documentoFiscal.descServicos}&valor=${this.documentoFiscal.valor}&valorEx=${this.documentoFiscal.valorEx}&banco=${this.documentoFiscal.banco}&pix=${this.documentoFiscal.pix}`,
+      `http://34.127.35.212:8080/documento-fiscal/pdf?dtEmissao=${this.documentoFiscal.dtEmissao}&numeroNota=${this.documentoFiscal.numeroNota}&nmCliente=${this.documentoFiscal.nmCliente}&endCliente=${this.documentoFiscal.endCliente}&muniUfCliente=${this.documentoFiscal.muniUfCliente}&cnpjCliente=${this.documentoFiscal.cnpjCliente}&descServicos=${this.documentoFiscal.descServicos}&valor=${this.documentoFiscal.valor}&valorEx=${this.documentoFiscal.valorEx}&banco=${this.documentoFiscal.banco}&pix=${this.documentoFiscal.pix}`,
       '_blank'
     );
     window.focus();

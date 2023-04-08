@@ -10,9 +10,9 @@ import { DocumentoFiscal } from '../model/DocumentoFiscal';
 export class DocumentoFiscalService {
   constructor(private httpClient: HttpClient) {}
 
-  imprimir(record: DocumentoFiscal) {
+  imprimir(documentoFiscal: DocumentoFiscal) {
     return this.httpClient
-      .post<DocumentoFiscal>(`${API}/pdf`, record)
+      .post<[]>(`${API}/pdf`, documentoFiscal)
       .pipe(first());
   }
 }
